@@ -756,7 +756,7 @@
     const SUPABASE_KEY = 'sb_publishable_TINuSdJfrRqm74yBFMZe3g_RDyWvAEP';
     
     const { createClient } = window.supabase;
-    const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+    const db = createClient(SUPABASE_URL, SUPABASE_KEY);
 
     const defaultBudgets = {
       '日常餐': 15500, '應酬餐': 6000, '房屋開銷': 25400, '交通': 5500,
@@ -805,9 +805,9 @@
         updateSyncStatus('syncing');
         
         const [{ data: expData }, { data: fixedData }, { data: incomeData }] = await Promise.all([
-          supabase.from('expenses').select('*'),
-          supabase.from('fixed_expenses').select('*'),
-          supabase.from('income_items').select('*')
+          db.from('expenses').select('*'),
+          db.from('fixed_expenses').select('*'),
+          db.from('income_items').select('*')
         ]);
 
         expenses = expData || [];
@@ -832,7 +832,7 @@
 
       if (isConnected) {
         try {
-          await supabase.from('expenses').insert([expense]);
+          await db.from('expenses').insert([expense]);
         } catch (error) {
           console.error('上傳失敗:', error);
         }
@@ -845,7 +845,7 @@
 
       if (isConnected) {
         try {
-          await supabase.from('fixed_expenses').insert([item]);
+          await db.from('fixed_expenses').insert([item]);
         } catch (error) {
           console.error('上傳失敗:', error);
         }
@@ -858,7 +858,7 @@
 
       if (isConnected) {
         try {
-          await supabase.from('income_items').insert([item]);
+          await db.from('income_items').insert([item]);
         } catch (error) {
           console.error('上傳失敗:', error);
         }
