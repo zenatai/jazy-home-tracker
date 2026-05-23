@@ -10,7 +10,6 @@
       --primary: #C15F3C;
       --black: #2D2D2D;
       --white: #FFFFFF;
-      --light-purple: #8B4A8B;
       --light-gray: #F5F5F5;
     }
 
@@ -89,13 +88,10 @@
       overflow-x: auto;
       scroll-behavior: smooth;
       padding: 12px 16px;
-      border-bottom: none;
       -webkit-overflow-scrolling: touch;
     }
 
-    .tabs::-webkit-scrollbar {
-      display: none;
-    }
+    .tabs::-webkit-scrollbar { display: none; }
 
     .tab-btn {
       flex-shrink: 0;
@@ -117,7 +113,6 @@
     .tab-btn.active {
       background: var(--white);
       color: var(--primary);
-      border-color: var(--white);
     }
 
     .content {
@@ -130,13 +125,8 @@
       to { opacity: 1; }
     }
 
-    .tab-content {
-      display: none;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
 
     .card {
       background: var(--white);
@@ -172,8 +162,7 @@
       color: var(--white);
     }
 
-    .metric-card.primary .metric-label,
-    .metric-card.primary .metric-info {
+    .metric-card.primary .metric-label {
       color: rgba(255, 255, 255, 0.85);
     }
 
@@ -196,9 +185,7 @@
       color: var(--white);
     }
 
-    .form-group {
-      margin-bottom: 16px;
-    }
+    .form-group { margin-bottom: 16px; }
 
     .form-group label {
       display: block;
@@ -237,9 +224,7 @@
       margin-top: 16px;
     }
 
-    .button-group.full {
-      grid-template-columns: 1fr;
-    }
+    .button-group.full { grid-template-columns: 1fr; }
 
     button {
       padding: 12px 24px;
@@ -254,24 +239,10 @@
       letter-spacing: 0.5px;
     }
 
-    button.primary {
-      background: var(--black);
-      color: var(--white);
-    }
-
-    button.primary:active {
-      opacity: 0.8;
-    }
-
-    button.secondary {
-      background: var(--white);
-      color: var(--black);
-      border: 2px solid var(--black);
-    }
-
-    button.secondary:active {
-      opacity: 0.8;
-    }
+    button.primary { background: var(--black); color: var(--white); }
+    button.primary:active { opacity: 0.8; }
+    button.secondary { background: var(--white); color: var(--black); border: 2px solid var(--black); }
+    button.secondary:active { opacity: 0.8; }
 
     button.person {
       background: var(--white);
@@ -284,7 +255,6 @@
     button.person.active {
       background: var(--black);
       color: var(--white);
-      border-color: var(--black);
     }
 
     .budget-item {
@@ -311,7 +281,6 @@
 
     .budget-fill {
       height: 100%;
-      border-radius: 0;
       transition: width 0.3s ease;
       background: var(--primary);
     }
@@ -349,7 +318,6 @@
     .bar-fill {
       width: 50px;
       background: var(--primary);
-      border-radius: 0;
       min-height: 20px;
       transition: all 0.3s;
     }
@@ -371,9 +339,7 @@
       align-items: center;
     }
 
-    .expense-item:last-child {
-      border-bottom: none;
-    }
+    .expense-item:last-child { border-bottom: none; }
 
     .expense-badge {
       background: var(--black);
@@ -392,24 +358,9 @@
       gap: 4px;
     }
 
-    .expense-name {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--black);
-    }
-
-    .expense-note {
-      font-size: 12px;
-      color: #666;
-      font-weight: 500;
-    }
-
-    .expense-amount {
-      text-align: right;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--primary);
-    }
+    .expense-name { font-size: 14px; font-weight: 700; color: var(--black); }
+    .expense-note { font-size: 12px; color: #666; font-weight: 500; }
+    .expense-amount { text-align: right; font-size: 14px; font-weight: 700; color: var(--primary); }
 
     .fixed-item {
       display: grid;
@@ -423,25 +374,9 @@
       border: 1px solid var(--black);
     }
 
-    .fixed-name {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--black);
-    }
-
-    .fixed-date {
-      font-size: 12px;
-      color: #666;
-      font-weight: 600;
-    }
-
-    .fixed-amount {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--black);
-      min-width: 60px;
-      text-align: right;
-    }
+    .fixed-name { font-size: 13px; font-weight: 700; color: var(--black); }
+    .fixed-date { font-size: 12px; color: #666; font-weight: 600; }
+    .fixed-amount { font-size: 13px; font-weight: 700; color: var(--black); min-width: 60px; text-align: right; }
 
     .delete-btn {
       width: 32px;
@@ -455,9 +390,7 @@
       cursor: pointer;
     }
 
-    .delete-btn:active {
-      opacity: 0.6;
-    }
+    .delete-btn:active { opacity: 0.6; }
 
     .toast {
       position: fixed;
@@ -499,7 +432,6 @@
       border-top: 2px solid var(--black);
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 0;
       z-index: 99;
     }
 
@@ -509,7 +441,6 @@
       align-items: center;
       justify-content: center;
       padding: 12px 4px;
-      text-decoration: none;
       border: none;
       background: none;
       cursor: pointer;
@@ -520,15 +451,8 @@
       transition: all 0.2s;
     }
 
-    .nav-item.active {
-      color: var(--primary);
-      background: var(--light-gray);
-    }
-
-    .nav-label {
-      font-size: 12px;
-      font-weight: 700;
-    }
+    .nav-item.active { color: var(--primary); background: var(--light-gray); }
+    .nav-label { font-size: 12px; font-weight: 700; }
 
     .income-item {
       display: grid;
@@ -542,19 +466,8 @@
       border: 1px solid var(--black);
     }
 
-    .income-name {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--black);
-    }
-
-    .income-amount {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--primary);
-      min-width: 80px;
-      text-align: right;
-    }
+    .income-name { font-size: 13px; font-weight: 700; color: var(--black); }
+    .income-amount { font-size: 13px; font-weight: 700; color: var(--primary); min-width: 80px; text-align: right; }
 
     .sync-status {
       font-size: 12px;
@@ -564,13 +477,8 @@
       margin-bottom: 12px;
     }
 
-    .sync-status.syncing {
-      color: var(--primary);
-    }
-
-    .sync-status.synced {
-      color: #4CAF50;
-    }
+    .sync-status.syncing { color: var(--primary); }
+    .sync-status.synced { color: #4CAF50; }
   </style>
 </head>
 <body>
@@ -589,11 +497,12 @@
       <button class="tab-btn active" data-tab="record">記帳</button>
       <button class="tab-btn" data-tab="dashboard">總覽</button>
       <button class="tab-btn" data-tab="expenses">明細</button>
-      <button class="tab-btn" data-tab="fixed">固定</button>
+      <button class="tab-btn" data-tab="fixed">支出</button>
       <button class="tab-btn" data-tab="income">收入</button>
     </div>
 
     <div class="content">
+      <!-- 記帳 -->
       <div id="record" class="tab-content active">
         <div class="card">
           <h2>快速記帳</h2>
@@ -645,6 +554,7 @@
         </div>
       </div>
 
+      <!-- 總覽 -->
       <div id="dashboard" class="tab-content">
         <div class="metrics-grid">
           <div class="metric-card primary">
@@ -657,7 +567,7 @@
           </div>
           <div class="metric-card">
             <div class="metric-label">預算總額</div>
-            <div class="metric-value">85,978</div>
+            <div class="metric-value" id="totalBudget">0</div>
           </div>
           <div class="metric-card" id="remainingCard">
             <div class="metric-label">剩餘預算</div>
@@ -668,6 +578,11 @@
         <div class="card">
           <h2>預算進度</h2>
           <div id="budgetBars"></div>
+          <button class="secondary" id="toggleBudgetEdit" style="width:100%;margin-top:12px;">調整預算</button>
+          <div id="budgetEditForm" style="display:none;margin-top:12px;">
+            <div id="budgetInputs"></div>
+            <button class="primary" id="saveBudgetBtn" style="width:100%;margin-top:8px;">儲存預算</button>
+          </div>
         </div>
 
         <div class="card">
@@ -676,6 +591,7 @@
         </div>
       </div>
 
+      <!-- 明細 -->
       <div id="expenses" class="tab-content">
         <div class="card">
           <h2>本月詳細</h2>
@@ -683,14 +599,15 @@
         </div>
       </div>
 
+      <!-- 支出 -->
       <div id="fixed" class="tab-content">
         <div class="card">
-          <h2>固定支出</h2>
+          <h2>定期支出</h2>
           <div id="fixedList"></div>
         </div>
 
         <div class="card">
-          <h2>新增固定支出</h2>
+          <h2>新增定期支出</h2>
           <div class="form-group">
             <label>支出名稱</label>
             <input type="text" id="fixedName" placeholder="例：Netflix">
@@ -707,6 +624,7 @@
         </div>
       </div>
 
+      <!-- 收入 -->
       <div id="income" class="tab-content">
         <div class="card">
           <h2>新增收入項目</h2>
@@ -744,7 +662,7 @@
       <div class="nav-label">明細</div>
     </button>
     <button class="nav-item" data-tab="fixed">
-      <div class="nav-label">固定</div>
+      <div class="nav-label">支出</div>
     </button>
     <button class="nav-item" data-tab="income">
       <div class="nav-label">收入</div>
@@ -754,7 +672,7 @@
   <script>
     const SUPABASE_URL = 'https://elvhjrtjmjnosuzlignt.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_TINuSdJfrRqm74yBFMZe3g_RDyWvAEP';
-    
+
     const { createClient } = window.supabase;
     const db = createClient(SUPABASE_URL, SUPABASE_KEY);
 
@@ -766,7 +684,7 @@
     };
 
     let currentPerson = 'Zena';
-    let budgets = defaultBudgets;
+    let budgets = JSON.parse(localStorage.getItem('budgets') || JSON.stringify(defaultBudgets));
     let fixedExpenses = [];
     let incomeItems = [];
     let expenses = [];
@@ -803,33 +721,46 @@
     async function loadData() {
       try {
         updateSyncStatus('syncing');
-        
-        const [{ data: expData }, { data: fixedData }, { data: incomeData }] = await Promise.all([
+
+        const [{ data: expData }, { data: fixedData }, { data: incomeData }, { data: settingsData }] = await Promise.all([
           db.from('expenses').select('*'),
           db.from('fixed_expenses').select('*'),
-          db.from('income_items').select('*')
+          db.from('income_items').select('*'),
+          db.from('settings').select('*').eq('key', 'budgets')
         ]);
 
         expenses = expData || [];
         fixedExpenses = fixedData || [];
         incomeItems = incomeData || [];
+        if (settingsData && settingsData[0]) {
+          budgets = settingsData[0].value;
+        }
 
         updateSyncStatus('synced');
         renderDashboard();
+        renderTodayExpenses();
       } catch (error) {
         console.error('載入失敗:', error);
         updateSyncStatus('error');
         expenses = JSON.parse(localStorage.getItem('expenses') || '[]');
         fixedExpenses = JSON.parse(localStorage.getItem('fixedExpenses') || '[]');
         incomeItems = JSON.parse(localStorage.getItem('incomeItems') || '[]');
+        budgets = JSON.parse(localStorage.getItem('budgets') || JSON.stringify(defaultBudgets));
         renderDashboard();
+        renderTodayExpenses();
+      }
+    }
+
+    async function saveBudgets() {
+      localStorage.setItem('budgets', JSON.stringify(budgets));
+      if (isConnected) {
+        await db.from('settings').upsert([{ key: 'budgets', value: budgets }], { onConflict: 'key' });
       }
     }
 
     async function saveExpense(expense) {
       expenses.push(expense);
       localStorage.setItem('expenses', JSON.stringify(expenses));
-
       if (isConnected) {
         try {
           await db.from('expenses').insert([expense]);
@@ -840,37 +771,39 @@
     }
 
     async function saveFixedExpense(item) {
-      fixedExpenses.push(item);
-      localStorage.setItem('fixedExpenses', JSON.stringify(fixedExpenses));
-
       if (isConnected) {
         try {
-          await db.from('fixed_expenses').insert([item]);
+          const { data } = await db.from('fixed_expenses').insert([item]).select();
+          fixedExpenses.push(data ? data[0] : item);
         } catch (error) {
           console.error('上傳失敗:', error);
+          fixedExpenses.push(item);
         }
+      } else {
+        fixedExpenses.push(item);
       }
+      localStorage.setItem('fixedExpenses', JSON.stringify(fixedExpenses));
     }
 
     async function saveIncomeItem(item) {
-      incomeItems.push(item);
-      localStorage.setItem('incomeItems', JSON.stringify(incomeItems));
-
       if (isConnected) {
         try {
-          await db.from('income_items').insert([item]);
+          const { data } = await db.from('income_items').insert([item]).select();
+          incomeItems.push(data ? data[0] : item);
         } catch (error) {
           console.error('上傳失敗:', error);
+          incomeItems.push(item);
         }
+      } else {
+        incomeItems.push(item);
       }
+      localStorage.setItem('incomeItems', JSON.stringify(incomeItems));
     }
 
     function setupTabs() {
-      const allBtns = document.querySelectorAll('.tab-btn, .nav-item');
-      allBtns.forEach(btn => {
+      document.querySelectorAll('.tab-btn, .nav-item').forEach(btn => {
         btn.addEventListener('click', (e) => {
-          const tab = e.currentTarget.dataset.tab;
-          switchTab(tab);
+          switchTab(e.currentTarget.dataset.tab);
         });
       });
     }
@@ -879,7 +812,7 @@
       document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
-      
+
       document.getElementById(tab).classList.add('active');
       document.querySelectorAll(`[data-tab="${tab}"]`).forEach(el => el.classList.add('active'));
 
@@ -945,16 +878,18 @@
     function renderDashboard() {
       const month = document.getElementById('monthSelect').value;
       const filtered = expenses.filter(e => e.date && e.date.startsWith(month));
-      
+
       const totalIncome = calculateTotalIncome();
       const totalFixed = fixedExpenses.reduce((sum, f) => sum + f.amount, 0);
       const totalVariable = filtered.reduce((sum, e) => sum + e.amount, 0);
       const total = totalFixed + totalVariable;
       const remaining = totalIncome - total;
+      const totalBudget = Object.values(budgets).reduce((s, v) => s + v, 0);
 
       document.getElementById('totalExpense').innerText = formatNumber(total);
       document.getElementById('remaining').innerText = formatNumber(Math.max(0, remaining));
       document.getElementById('incomeDisplay').innerText = formatNumber(totalIncome);
+      document.getElementById('totalBudget').innerText = formatNumber(totalBudget);
 
       const budgetBars = document.getElementById('budgetBars');
       budgetBars.innerHTML = '';
@@ -976,9 +911,7 @@
       const chart = document.getElementById('chart');
       chart.innerHTML = '';
       const byCat = {};
-      filtered.forEach(e => {
-        byCat[e.category] = (byCat[e.category] || 0) + e.amount;
-      });
+      filtered.forEach(e => { byCat[e.category] = (byCat[e.category] || 0) + e.amount; });
       const sorted = Object.entries(byCat).sort((a, b) => b[1] - a[1]).slice(0, 8);
       const max = Math.max(...sorted.map(x => x[1]), 1);
       sorted.forEach(([cat, amt]) => {
@@ -1002,7 +935,7 @@
         return;
       }
 
-      list.innerHTML = filtered.map((e) => `
+      list.innerHTML = filtered.map(e => `
         <div class="expense-item">
           <div class="expense-badge">${e.category}</div>
           <div class="expense-details">
@@ -1015,16 +948,16 @@
     }
 
     function renderTodayExpenses() {
-      const today = new Date().toISOString().split('T')[0];
-      const todayExpenses = expenses.filter(e => e.date === today);
+      const todayStr = new Date().toISOString().split('T')[0];
+      const todayList = expenses.filter(e => e.date === todayStr);
       const list = document.getElementById('todayExpenses');
 
-      if (todayExpenses.length === 0) {
+      if (todayList.length === 0) {
         list.innerHTML = '<div class="empty-state">今日還沒有記帳</div>';
         return;
       }
 
-      list.innerHTML = todayExpenses.map((e) => `
+      list.innerHTML = todayList.map(e => `
         <div class="expense-item">
           <div class="expense-badge">${e.category}</div>
           <div class="expense-details">
@@ -1041,7 +974,7 @@
       const total = fixedExpenses.reduce((sum, f) => sum + f.amount, 0);
 
       if (fixedExpenses.length === 0) {
-        list.innerHTML = '<div class="empty-state">還沒有固定支出</div>';
+        list.innerHTML = '<div class="empty-state">還沒有定期支出</div>';
         return;
       }
 
@@ -1057,23 +990,27 @@
       `).join('');
 
       list.innerHTML += `
-        <div style="padding: 12px; background: var(--black); border-radius: 8px; margin-top: 12px; border: 2px solid var(--black); text-align: center;">
-          <div style="font-size: 13px; color: var(--white); font-weight: 700; margin-bottom: 6px;">固定支出合計</div>
+        <div style="padding: 12px; background: var(--black); border-radius: 8px; margin-top: 12px; text-align: center;">
+          <div style="font-size: 13px; color: var(--white); font-weight: 700; margin-bottom: 6px;">定期支出合計</div>
           <div style="font-size: 20px; font-weight: 700; color: var(--white);">${formatNumber(total)}</div>
         </div>
       `;
     }
 
-    function deleteFixed(index) {
+    async function deleteFixed(index) {
       if (confirm('確定要刪除嗎？')) {
+        const item = fixedExpenses[index];
         fixedExpenses.splice(index, 1);
         localStorage.setItem('fixedExpenses', JSON.stringify(fixedExpenses));
+        if (isConnected && item.id) {
+          await db.from('fixed_expenses').delete().eq('id', item.id);
+        }
         renderFixedExpenses();
         renderDashboard();
       }
     }
 
-    document.getElementById('addFixed').addEventListener('click', () => {
+    document.getElementById('addFixed').addEventListener('click', async () => {
       const name = document.getElementById('fixedName').value;
       const amount = parseFloat(document.getElementById('fixedAmount').value) || 0;
       const day = parseInt(document.getElementById('fixedDay').value) || 1;
@@ -1083,7 +1020,7 @@
         return;
       }
 
-      saveFixedExpense({ name, amount, day });
+      await saveFixedExpense({ name, amount, day });
       document.getElementById('fixedName').value = '';
       document.getElementById('fixedAmount').value = '';
       document.getElementById('fixedDay').value = '';
@@ -1093,7 +1030,7 @@
       showToast();
     });
 
-    document.getElementById('addIncomeItem').addEventListener('click', () => {
+    document.getElementById('addIncomeItem').addEventListener('click', async () => {
       const name = document.getElementById('incomeItemName').value;
       const amount = parseFloat(document.getElementById('incomeItemAmount').value) || 0;
 
@@ -1102,7 +1039,7 @@
         return;
       }
 
-      saveIncomeItem({ name, amount });
+      await saveIncomeItem({ name, amount });
       document.getElementById('incomeItemName').value = '';
       document.getElementById('incomeItemAmount').value = '';
 
@@ -1132,10 +1069,14 @@
       document.getElementById('incomeTotal').innerText = formatNumber(total);
     }
 
-    function deleteIncome(index) {
+    async function deleteIncome(index) {
       if (confirm('確定要刪除嗎？')) {
+        const item = incomeItems[index];
         incomeItems.splice(index, 1);
         localStorage.setItem('incomeItems', JSON.stringify(incomeItems));
+        if (isConnected && item.id) {
+          await db.from('income_items').delete().eq('id', item.id);
+        }
         renderIncomeList();
         renderDashboard();
       }
@@ -1144,6 +1085,36 @@
     document.getElementById('monthSelect').addEventListener('change', () => {
       renderDashboard();
       renderExpensesList();
+    });
+
+    document.getElementById('toggleBudgetEdit').addEventListener('click', () => {
+      const form = document.getElementById('budgetEditForm');
+      const isHidden = form.style.display === 'none';
+      if (isHidden) {
+        document.getElementById('budgetInputs').innerHTML = Object.entries(budgets).map(([cat, amt]) => `
+          <div style="display:grid;grid-template-columns:1fr 100px;gap:8px;align-items:center;margin-bottom:8px;">
+            <div style="font-size:13px;font-weight:700;">${cat}</div>
+            <input type="number" data-cat="${cat}" value="${amt}" min="0" step="1"
+              style="padding:6px;border:2px solid var(--black);border-radius:4px;font-size:14px;font-weight:600;text-align:right;">
+          </div>
+        `).join('');
+        form.style.display = 'block';
+        document.getElementById('toggleBudgetEdit').textContent = '收起';
+      } else {
+        form.style.display = 'none';
+        document.getElementById('toggleBudgetEdit').textContent = '調整預算';
+      }
+    });
+
+    document.getElementById('saveBudgetBtn').addEventListener('click', async () => {
+      document.querySelectorAll('#budgetInputs input').forEach(input => {
+        budgets[input.dataset.cat] = parseFloat(input.value) || 0;
+      });
+      await saveBudgets();
+      document.getElementById('budgetEditForm').style.display = 'none';
+      document.getElementById('toggleBudgetEdit').textContent = '調整預算';
+      renderDashboard();
+      showToast();
     });
 
     setupTabs();
