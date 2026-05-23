@@ -762,11 +762,8 @@
       expenses.push(expense);
       localStorage.setItem('expenses', JSON.stringify(expenses));
       if (isConnected) {
-        try {
-          await db.from('expenses').insert([expense]);
-        } catch (error) {
-          console.error('上傳失敗:', error);
-        }
+        const { error } = await db.from('expenses').insert([expense]);
+        if (error) console.error('Supabase insert 失敗:', error.message, error.code);
       }
     }
 
@@ -844,7 +841,7 @@
       setTimeout(() => toast.classList.remove('show'), 2000);
     }
 
-    document.getElementById('addExpense').addEventListener('click', () => {
+    document.getElementById('addExpense').addEventListener('click', async () => {
       const cat = document.getElementById('category').value;
       const amt = parseFloat(document.getElementById('amount').value) || 0;
       const note = document.getElementById('note').value;
@@ -862,7 +859,7 @@
         note: note
       };
 
-      saveExpense(expense);
+      await saveExpense(expense);
       showToast();
       document.getElementById('clearForm').click();
       renderDashboard();
